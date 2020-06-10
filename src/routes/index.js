@@ -1,9 +1,9 @@
 const { Router} = require('express');
 const router = Router();
 
-const { Favoritos, createUser, authUser, updateUser, Token, Unique, createFavorito, addFavorito, addRecente, Recentes, Destino, AuthToken} = require('../controllers/index.controller');
+const {Test, Favoritos, createUser, authUser, updateUser, Token, Unique, createFavorito, addFavorito, addRecente, Recentes, Destino, AuthToken} = require('../controllers/index.controller');
 
-
+router.get('/', Test);
 router.post('/insert', Unique, createUser, createFavorito);
 router.post('/auth', authUser);
 router.put('/update', Token, updateUser);

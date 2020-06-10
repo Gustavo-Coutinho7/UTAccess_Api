@@ -17,6 +17,9 @@ const pool = new Pool ({
     port: 5432,
 })
 
+const Test =  async(req, res, next) => {
+  res.status(200).send( "Hello World");
+}
 const Unique = async(req, res, next)=>{
   try {
 
@@ -188,6 +191,7 @@ const hash = bcrypt.hashSync(password, salt);
       )
     }
 module.exports = {
+  Test,
   Favoritos,
   Recentes,
   createUser,
